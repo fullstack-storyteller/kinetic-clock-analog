@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.mainSpace {
+  margin: 7% auto;
+  width: 500px;
+  height: 500px;
+  background: turquoise;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.clock-frame {
+  background: tomato;
+  position: absolute;
+  left: -33%;
+  width: 120%;
+  height: 120%;
+  top: -11%;
+  border-radius: 50%;
+  z-index: 1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: rotate 4s linear infinite;
+  -webkit-animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+  }
+}
