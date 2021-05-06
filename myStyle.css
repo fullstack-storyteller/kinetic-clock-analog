@@ -4,8 +4,9 @@
   padding: 0;
 }
 body {
-  background: rgb(136, 174, 245);
+  background: rgba(245, 229, 136, 0.596);
 }
+
 .mainSpace {
   margin: 7% auto;
   width: 450px;
@@ -89,7 +90,8 @@ body {
 }
 .rotateMins {
   animation: rotate 3600s linear infinite, opacitymins 3600s linear infinite;
-  -webkit-animation: rotate 3600s linear infinite, opacitymins 3600s linear infinite;
+  -webkit-animation: rotate 3600s linear infinite,
+    opacitymins 3600s linear infinite;
   transform-origin: -790% -170%;
 }
 /*animation: rotate 1s linear infinite, opacitysecs 60s linear infinite;
