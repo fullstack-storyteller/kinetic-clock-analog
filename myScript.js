@@ -7,25 +7,20 @@ const [hh, mm, ss_daypart] = [...new Date().toLocaleTimeString().split(':')];
 const [ss, daypart] = ss_daypart.split(' ');
 
 const initClockFrame = (delay, z_index, members, identifier, initial) => {
-  //   for (let i = 0; i < members; i++) {
-  //     document
-  //       .querySelector(`.${identifier}${i}`)
-  //       .style.setProperty('animation-delay', `${delay * i}s`);
-
-  //     document
-  //       .querySelector(`.${identifier}${i}`)
-  //       .style.setProperty('z-index', `${z_index - i}`);
-  //   }
-  let i = initial;
+  let i = Number(initial);
   let counter = 0;
   while (counter < members) {
     if (i >= members) {
       i %= members;
     }
-
+    // console.log(`.${identifier}${i}`);
+    let diff = 0;
+    if (identifier === 'm') {
+      diff = ss;
+    }
     document
       .querySelector(`.${identifier}${i}`)
-      .style.setProperty('animation-delay', `${delay * counter}s`);
+      .style.setProperty('animation-delay', `${delay * counter - diff}s`);
 
     document
       .querySelector(`.${identifier}${i}`)
