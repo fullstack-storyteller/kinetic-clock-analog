@@ -18,6 +18,9 @@ const initClockFrame = (delay, z_index, members, identifier, initial) => {
     if (identifier === 'm') {
       diff = ss;
     }
+    if (identifier === 'n') {
+      diff = mm * 60;
+    }
     document
       .querySelector(`.${identifier}${i}`)
       .style.setProperty('animation-delay', `${delay * counter - diff}s`);

@@ -115,13 +115,10 @@ body {
   0% {
     opacity: 100%;
   }
+  1% {
+    opacity: 15%;
+  }
 
-  15% {
-    opacity: 5%;
-  }
-  25% {
-    opacity: 30%;
-  }
   100% {
     opacity: 25%;
   }
@@ -131,7 +128,7 @@ body {
     opacity: 100%;
   }
 
-  4% {
+  2% {
     opacity: 1%;
   }
   15% {
@@ -147,8 +144,8 @@ body {
     opacity: 100%;
   }
 
-  6% {
-    opacity: 1%;
+  3% {
+    opacity: 2%;
   }
   15% {
     opacity: 30%;
