@@ -6,7 +6,7 @@ https://fullstack-storyteller.github.io/kinetic-clock-bubbles/index.html
 ## Note:
 Let the project run for sometime to see its full capability.
 
-## Refreshing the webpage will reinitialize the clock with system date time.
+## Refreshing the webpage will reinitialize the clock with system time.
 
 ## This was sort of a passion project.
 * I wanted to build a clock, then I thought why not build something kinetic.
