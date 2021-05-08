@@ -17,4 +17,4 @@ Let the project run for sometime to see its full capability.
 git commit -m 'rebuild pages' --allow-empty
 git push origin <branch-name>
   
-### reach out to me with critic, collaboration and general chit-chat @ manish.aec2012@gmail.com
+### Do reach out to me with critic, collaboration and general chit-chat @ manish.aec2012@gmail.com
