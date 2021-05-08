@@ -3,9 +3,38 @@ const animation_delay_quantum_mins = 60;
 const animation_delay_quantum_secs = 1;
 //time quantum after which hours animation will start
 
-//initial value of the clock
+//initial value of the time
 const [hh, mm, ss_daypart] = [...new Date().toLocaleTimeString().split(':')];
 const [ss, daypart] = ss_daypart.split(' ');
+
+//this timer will check and ensure correct hours is displayed in active hour div
+let counterhour = 0; //counter to control fixed hour display
+let counterAmPM = 0; //counter to control AM PM values
+let diffAmPm = 60 - ss + (60 - mm) * 60 + (12 - hh) * 3600;
+let diffhour = 60 - ss + (60 - mm) * 60;
+
+const activeHrs = document.querySelector('.active-hour');
+const ampm = document.querySelector('.ampm');
+
+activeHrs.textContent = Number(hh) % 12;
+ampm.textContent = daypart;
+
+const chkHours = () => {
+  if (counterhour > diffhour) {
+    activeHrs.textContent = (Number(activeHrs.textContent) + 1) % 12;
+    counterhour = 0;
+    diffhour = 3600;
+  }
+  if (counterAmPM > diffAmPm) {
+    ampm.textContent = ampm.textContent === 'AM' ? 'PM' : 'AM';
+    counterAmPM = 0;
+    diffAmPm = 43200;
+  }
+  counterAmPM++;
+  counterhour++;
+};
+
+let start = setInterval(chkHours, 1000);
 
 const initClockFrame = (delay, z_index, members, identifier, initial) => {
   let i = Number(initial);
@@ -38,29 +67,3 @@ const initClockFrame = (delay, z_index, members, identifier, initial) => {
 initClockFrame(animation_delay_quantum_hrs, 1300, 12, 'n', hh);
 initClockFrame(animation_delay_quantum_mins, 600, 60, 'm', mm);
 initClockFrame(animation_delay_quantum_secs, 200, 60, 's', ss);
-
-//this timer will check and ensure correct hours is displayed in active hour div
-let counterhour = 0;
-let counterAmPM = 0;
-let diffAmPm = 59 - ss + (59 - mm) * 60 + (11 - hh) * 3600;
-let diffhour = 59 - ss + (59 - mm) * 60;
-const activeHrs = document.querySelector('.active-hour');
-const ampm = document.querySelector('.ampm');
-activeHrs.textContent = Number(hh);
-ampm.textContent = daypart;
-const chkHours = () => {
-  if (counterhour > diffhour) {
-    activeHrs.textContent = (Number(activeHrs.textContent) + 1) % 12;
-    counterhour = 0;
-    diffhour = 3600;
-  }
-  if (counterAmPM > diffAmPm) {
-    ampm.textContent = ampm.textContent === 'AM' ? 'PM' : 'AM';
-    counterAmPM = 0;
-    diffAmPm = 43200;
-  }
-  counterAmPM++;
-  counterhour++;
-};
-
-let start = setInterval(chkHours, 1000);

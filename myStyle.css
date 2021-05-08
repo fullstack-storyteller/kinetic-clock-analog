@@ -11,7 +11,7 @@ body {
   margin: 7% auto;
   width: 450px;
   height: 450px;
-  background: turquoise;
+  background: rgb(99, 243, 229);
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -47,13 +47,13 @@ body {
 .clock-frame-mins {
   /* display: none; */
   z-index: 500;
-  background: rgb(209, 169, 10);
+  background: rgb(230, 191, 39);
   left: -60%;
 }
 .clock-frame-secs {
   /* display: none; */
   z-index: 100;
-  background: greenyellow;
+  background: rgb(170, 243, 75);
   left: -40%;
 }
 .numberCircle,
@@ -81,14 +81,14 @@ body {
   height: 30px;
   font: 16px Arial, sans-serif, bolder;
   padding: 3px;
-  border: 2px solid rgb(212, 185, 61);
+  border: 2px solid rgb(37, 37, 35);
 }
 .numberCircleMins {
   width: 35px;
   height: 35px;
   font: 20px Arial, sanns-serif, bolder;
   padding: 3px 3px;
-  border: 2px solid rgb(105, 230, 67);
+  border: 2px solid rgb(37, 37, 35);
 }
 .fixed-hour-circle {
   border-radius: 50%;
@@ -178,14 +178,14 @@ body {
 }
 @keyframes opacityhrs {
   0% {
-    opacity: 50%;
+    opacity: 0%;
   }
-  0.5% {
-    opacity: 15%;
+  3% {
+    opacity: 25%;
   }
 
   100% {
-    opacity: 25%;
+    opacity: 15%;
   }
 }
 @keyframes opacitymins {
@@ -193,14 +193,14 @@ body {
     opacity: 100%;
   }
 
-  2.15% {
+  2.5% {
     opacity: 1%;
   }
   15% {
     opacity: 30%;
   }
   100% {
-    opacity: 25%;
+    opacity: 15%;
   }
 }
 
@@ -369,19 +369,30 @@ body {
 .screen {
   z-index: 9999;
   position: absolute;
-  height: 40%;
-  width: 49%;
-
-  top: 24.5%;
-  left: 82%;
-
-  border-bottom: 1px dotted rgb(151, 20, 20);
+  height: 15%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  border-image-source: linear-gradient(
+    rgb(99, 243, 229),
+    rgb(170, 243, 75),
+    rgb(230, 191, 39),
+    tomato
+  );
+  border-image-slice: 1;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-radius: 40%;
+  -webkit-border-radius: 40%;
+  -moz-border-radius: 40%;
+  -ms-border-radius: 40%;
+  -o-border-radius: 40%;
 }
 .ampm {
   opacity: 100%;
   left: 75%;
-  font-size: 150%;
-  padding: 7px 5px;
+  font-size: 120%;
+  padding: 14px 5px;
   animation: sparkle 5s linear infinite;
   -webkit-animation: sparkle 5s linear infinite;
 }
