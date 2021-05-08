@@ -1,4 +1,4 @@
-# kinetic-clock-analog
+# kinetic-clock-bubbles
 
 * Project is live at:
 https://fullstack-storyteller.github.io/kinetic-clock-bubbles/index.html
