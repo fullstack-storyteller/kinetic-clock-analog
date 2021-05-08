@@ -63,6 +63,7 @@ const initClockFrame = (delay, z_index, members, identifier, initial) => {
 
     i++;
     counter++;
+    
   }
 };
 
