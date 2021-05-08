@@ -9,7 +9,7 @@ Let the project run for sometime to see its full capability.
 ## Refreshing the webpage will reinitialize the clock with system date time.
 
 ## This was sort of a passion project.
-* I wanted to build a clock, then i thought why build something kinetic.
+* I wanted to build a clock, then I thought why not build something kinetic.
 * The synchronization of hour, minutes and seconds bubble was a bit tricky, but i got it to work. Key aspect was to understand the animation delay property of html tag involved in rotation on the clock frame.
 * Pheww, what a ride....
 
