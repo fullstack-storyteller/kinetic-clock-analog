@@ -4,9 +4,9 @@ const animation_delay_quantum_secs = 1;
 //time quantum after which hours animation will start
 
 //initial value of the time
-// const [hh, mm, ss_daypart] = [...new Date().toLocaleTimeString().split(':')];
+const [hh, mm, ss_daypart] = [...new Date().toLocaleTimeString().split(':')];
 
-const [hh, mm, ss_daypart] = [...'09:59:55 AM'.split(':')];
+// const [hh, mm, ss_daypart] = [...'09:59:55 AM'.split(':')];
 const [ss, daypart] = ss_daypart.split(' ');
 
 //this timer will check and ensure correct hours is displayed in active hour div
