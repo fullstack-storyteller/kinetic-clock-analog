@@ -14,7 +14,7 @@ let counterhour = 1; //counter to control fixed hour display
 let counterAmPM = 1; //counter to control AM PM values
 let diffAmPm = 60 - ss + (59 - mm) * 60 + (11 - hh) * 3600;
 let diffhour = 60 - ss + (59 - mm) * 60;
-console.log('diffhour', diffhour, 'diffAmPm', diffAmPm);
+// console.log('diffhour', diffhour, 'diffAmPm', diffAmPm);
 const activeHrs = document.querySelector('.active-hour');
 const ampm = document.querySelector('.ampm');
 
