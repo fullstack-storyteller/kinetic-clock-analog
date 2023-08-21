@@ -8,6 +8,7 @@ const [hh, mm, ss_daypart] = [...new Date().toLocaleTimeString().split(':')];
 
 // const [hh, mm, ss_daypart] = [...'09:59:55 AM'.split(':')];
 const [ss, daypart] = ss_daypart.split(' ');
+daypart=(new Date()).getHours() >= 12 ? "PM" : "AM";
 
 //this timer will check and ensure correct hours is displayed in active hour div
 let counterhour = 1; //counter to control fixed hour display
