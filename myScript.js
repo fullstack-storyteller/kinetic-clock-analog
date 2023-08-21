@@ -29,7 +29,7 @@ const chkHours = () => {
     diffhour = 3600;
   }
   if (counterAmPM >= diffAmPm) {
-    ampm.textContent = ampm.textContent === 'AM' ? 'PM' : 'AM';
+    //ampm.textContent = ampm.textContent === 'AM' ? 'PM' : 'AM';
     counterAmPM = 0;
     diffAmPm = 43200;
   }
